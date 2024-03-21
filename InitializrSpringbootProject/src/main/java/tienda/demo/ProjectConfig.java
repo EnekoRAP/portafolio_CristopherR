@@ -115,4 +115,15 @@ public class ProjectConfig implements WebMvcConfigurer {
                 .build();
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
+    
+    /* @Autowired
+    private UserDetailsService userDetailsService;
+    
+    @Autowired
+    public void configurerGlobal(AuthenticationManagerBuilder build)
+            throw Exception {
+        build
+                .userDetailsService(userDetailsService)
+                .passwordEncoder(new BCryptPasswordEncoder());
+    } */
 }
