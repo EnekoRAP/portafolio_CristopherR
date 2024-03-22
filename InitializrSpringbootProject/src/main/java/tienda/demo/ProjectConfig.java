@@ -1,10 +1,12 @@
 package tienda.demo;
 
 import java.util.Locale;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -116,7 +118,7 @@ public class ProjectConfig implements WebMvcConfigurer {
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
     
-    /* @Autowired
+    /*@Autowired
     private UserDetailsService userDetailsService;
     
     @Autowired
@@ -125,5 +127,5 @@ public class ProjectConfig implements WebMvcConfigurer {
         build
                 .userDetailsService(userDetailsService)
                 .passwordEncoder(new BCryptPasswordEncoder());
-    } */
+    }*/
 }
